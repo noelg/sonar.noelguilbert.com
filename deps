@@ -58,3 +58,11 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[RabbitMqBundle]
+    git=http://github.com/videlalvaro/RabbitMqBundle.git
+    target=/bundles/OldSound/RabbitMqBundle
+
+[php-amqplib]
+    git=http://github.com/videlalvaro/php-amqplib.git
+    target=videlalvaro/php-amqplib

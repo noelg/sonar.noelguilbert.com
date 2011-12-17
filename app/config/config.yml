@@ -59,3 +59,32 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+old_sound_rabbit_mq:
+    connections:
+        default:
+            host:      'localhost'
+            port:      5672
+            user:      'guest'
+            password:  'guest'
+            vhost:     '/'
+    producers:
+        create_project:
+            connection: default
+            exchange_options: { name: 'create-project', type: direct }
+        analyze_project:
+            connection: default
+            exchange_options: { name: 'analyze-project', type: direct }
+
+    consumers:
+        create_project:
+            connection: default
+            exchange_options: { name: 'create-project', type: direct }
+            queue_options:    { name: 'create-project' }
+            callback:         sonar_analyzer.create_project_service
+
+        analyze_project:
+            connection: default
+            exchange_options: { name: 'analyze-project', type: direct }
+            queue_options:    { name: 'analyze-project' }
+            callback:         sonar_analyzer.analyze_project_service

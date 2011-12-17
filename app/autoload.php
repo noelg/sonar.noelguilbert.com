@@ -14,6 +14,8 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
+    'OldSound'         => __DIR__.'/../vendor/bundles',
+    'PhpAmqpLib'       => __DIR__.'/../vendor/videlalvaro/php-amqplib',
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',
@@ -43,3 +45,10 @@ AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine/lib/Doctrine/ORM/M
 require_once __DIR__.'/../vendor/swiftmailer/lib/classes/Swift.php';
 Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/lib/swift_init.php');
 
+/**
+spl_autoload_register(function($class) {
+    eval(sprintf('class %s {}', $class));
+
+    return true;
+});
+*/

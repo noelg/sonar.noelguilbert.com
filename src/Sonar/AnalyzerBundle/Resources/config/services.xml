@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="sonar_analyzer.project_consumer.class">Sonar\AnalyzerBundle\Consumer\ProjectConsumer</parameter>
+        <parameter key="sonar_analyzer.sonar_consumer.class">Sonar\AnalyzerBundle\Consumer\SonarConsumer</parameter>
+        <parameter key="sonar_analyzer.knpbundle.api.class">Sonar\AnalyzerBundle\Knp\KnpBundleApi</parameter>
+        <parameter key="sonar_analyzer.knpbundle.api.transport.class">Sonar\AnalyzerBundle\Knp\CurlTransport</parameter>
+    </parameters>
+
+    <services>
+        <service id="sonar_analyzer.create_project_service" class="%sonar_analyzer.project_consumer.class%">
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+        <service id="sonar_analyzer.analyze_project_service" class="%sonar_analyzer.sonar_consumer.class%" />
+
+        <service id="sonar_analyzer.knpbundle.api" class="%sonar_analyzer.knpbundle.api.class%">
+            <argument type="service">
+                <service class="%sonar_analyzer.knpbundle.api.transport.class%">
+                    <argument type="service" id="logger" on-invalid="ignore" />
+                </service>
+            </argument>
+        </service>
+    </services>
+</container>
