@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rules>
+  <rule key="Symfony2.Scope.MethodScope.Missing" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>MethodScopeMissing</name>
+    <configKey>rulesets/MethodScope</configKey>
+    <description><![CDATA[No scope modifier specified for function "%s]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingBeforeParams" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingBeforeParams</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Parameters must appear immediately after the comment]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.Missing" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissing</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Missing function doc comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.WrongStyle" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentWrongStyle</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[You must use "/**" style comments for a function comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.ClassComment.WrongStyle" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ClassCommentWrongStyle</name>
+    <configKey>rulesets/ClassComment</configKey>
+    <description><![CDATA[You must use "/**" style comments for a %s comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingBeforeShort" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingBeforeShort</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Extra newline(s) found before function comment short description]]></description>
+  </rule>
+
+  <rule key="Squiz.ControlStructures.ControlSignature" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ControlStructuresControlSignature</name>
+    <configKey>rulesets/ControlSignature</configKey>
+    <description><![CDATA[Incorrect control signature]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.EmptyReturn" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentEmptyReturn</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[@return tag is empty in function comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingBeforeParamType" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingBeforeParamType</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Expected 1 space before variable type]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.ClassComment.TagIndent" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ClassCommentTagIndent</name>
+    <configKey>rulesets/ClassCommentTagIndent</configKey>
+    <description><![CDATA[Incorrect tag indentation in class comment]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.ParameterCommentsNotAligned" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentParameterCommentsNotAligned</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[The comments for parameters %s (%s) and %s (%s) do not align]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingBeforeTags" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingBeforeTags</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[There must be exactly one blank line before the tags in function comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.MissingParamTag" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissingParamTag</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Doc comment for "%s" missing]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.ParamNameNoMatch" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentParamNameNoMatch</name>
+    <configKey>rulesets/FunctionCommentParamNameNoMatch</configKey>
+    <description><![CDATA[Param name does not match function comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.ClassComment.Missing" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ClassCommentMissing</name>
+    <configKey>rulesets/ClassComment</configKey>
+    <description><![CDATA[Missing %s doc comment]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.MissingParamComment" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissingParamComment</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Missing comment for param "%s" at position %s]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.MissingReturnType" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissingReturnType</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Return type missing for @return tag in function comment]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingAfterParams" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingAfterParams</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Last parameter comment requires a blank newline after it]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.ParameterNamesNotAligned" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentParameterNamesNotAligned</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[The variable names for parameters %s (%s) and %s (%s) do not align]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.SpacingAfterLongName" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentSpacingAfterLongName</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Expected 1 space after the longest variable name]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.FunctionComment.MissingParamName" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissingParamName</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Missing parameter name at position '.$po]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.ExtraParamComment" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentExtraParamComment</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Superfluous doc comment at position '.$po]]></description>
+  </rule>
+
+
+  <rule key="Symfony2.Commenting.ClassComment.SpacingBeforeTags" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ClassCommentSpacingBeforeTags</name>
+    <configKey>rulesets/ClassComment</configKey>
+    <description><![CDATA[There must be exactly one blank line before the tags in %s comments]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.ClassComment.SpacingBeforeShort" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>ClassCommentSpacingBeforeShort</name>
+    <configKey>rulesets/ClassComment</configKey>
+    <description><![CDATA[Extra newline(s) found before %s comment short description]]></description>
+  </rule>
+
+  <rule key="Symfony2.Commenting.FunctionComment.MissingReturn" priority="MAJOR">
+    <category name="Maintainability" />
+    <name>FunctionCommentMissingReturn</name>
+    <configKey>rulesets/FunctionComment</configKey>
+    <description><![CDATA[Missing @return tag in function comment]]></description>
+  </rule>
+</rules>
