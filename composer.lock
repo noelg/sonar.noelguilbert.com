@@ -1,0 +1,67 @@
+{
+    "hash": "c3fad99ec1c32785fbbea26862b79902",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "dev-master",
+            "source-reference": "3137686dda79d9d46fb69ad05c053d6ad73c182d"
+        },
+        {
+            "package": "doctrine/common",
+            "version": "dev-master",
+            "alias-pretty-version": "2.3.x-dev",
+            "alias-version": "2.3.9999999.9999999-dev"
+        },
+        {
+            "package": "monolog/monolog",
+            "version": "1.1.0"
+        },
+        {
+            "package": "oldsound/rabbitmq-bundle",
+            "version": "dev-master",
+            "source-reference": "e0dbc8bbb6b9b59cef270813fca0cf6bc268c01c"
+        },
+        {
+            "package": "symfony/monolog-bundle",
+            "version": "dev-master",
+            "source-reference": "1231105826078c117e07e57d7f658141d6147d35"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
+            "source-reference": "b84b46ba1a4e1197d1e8874c395bcf661d52191d"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "source-reference": "dfc9edce334b2f157e84351586359f4871b8c8af"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "alias-pretty-version": "1.8.x-dev",
+            "alias-version": "1.8.9999999.9999999-dev"
+        },
+        {
+            "package": "videlalvaro/php-amqplib",
+            "version": "dev-master",
+            "source-reference": "e98ca899d867633cd8aa2ef04e8e9e6147d21df8"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "symfony/monolog-bundle": 20,
+        "oldsound/rabbitmq-bundle": 20,
+        "videlalvaro/php-amqplib": 20
+    }
+}
