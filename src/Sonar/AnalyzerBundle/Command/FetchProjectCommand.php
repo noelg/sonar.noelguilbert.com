@@ -44,6 +44,35 @@ class FetchProjectCommand extends Command
                 'version' => $bundle['lastCommitAt']
             );
 
+            // FIXME: lazy way, but doesn't need more complex stuff here
+            $content = @file_get_contents(sprintf('https://api.github.com/repos/%s/%s/branches', $bundle['username'], $bundle['name']));
+
+            if (!$content) {
+                $output->writeln(sprintf('Ignore bundle <comment>%s</comment>: no master head, or not initialized', $bundle['name']));
+                continue;
+            }
+
+            $content = json_decode($content, true);
+            $sha1 = false;
+            foreach ($content as $branch)
+            {
+                if (!$sha1 || $branch['name'] == 'master') {
+                    $sha1 = substr($branch['commit']['sha'], 0, 6);
+                }
+            }
+
+            if (!$sha1) {
+                $output->writeln(sprintf('Ignore bundle <comment>%s</comment>: no master head', $bundle['name']));
+                continue;
+            }
+
+            $headVersion = $this->getCurrentVersion($bundle);
+
+            if ($sha1 == $headVersion) {
+                $output->writeln(sprintf('Ignore bundle <comment>%s/%s</comment>: same version (%s)', $bundle['username'], $bundle['name'], $headVersion));
+                continue;
+            }
+
             $output->writeln(sprintf(
                 'Adding bundle <comment>%s/%s</comment> to the queue',
                 $bundle['username'], $bundle['name']
@@ -53,5 +82,23 @@ class FetchProjectCommand extends Command
                 ->get('old_sound_rabbit_mq.create_project_producer')
                 ->publish(serialize($msg));
         }
+    }
+
+    private function getCurrentVersion($config)
+    {
+        $url = sprintf('http://localhost:9000/api/resources?resource=%s:%s&depth=-1&qualifiers=TRK&format=json',
+            $config['username'],
+            $config['name']
+        );
+
+        $content = @file_get_contents($url);
+
+        if (!$content) {
+            return false;
+        }
+
+        $json = json_decode($content, true);
+
+        return isset($json[0]['version']) ? $json[0]['version'] : null;
     }
 }

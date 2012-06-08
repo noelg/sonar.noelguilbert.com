@@ -10,7 +10,7 @@
   <groupId>%%GROUP_ID%%</groupId>
   <artifactId>%%ARTIFACT_ID%%</artifactId>
   <name>%%NAME%%</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>%%VERSION%%</version>
   <!-- For the moment, specify pom as packaging for php projects -->
   <packaging>pom</packaging>
 
